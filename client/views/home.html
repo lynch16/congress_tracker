@@ -1,7 +1,9 @@
 <div class="home">
-  Home
+
+  Filter by State Name: <input ng-model="home.search" />
+
   <ul>
-    <li ng-repeat='state in home.states'>
+    <li ng-repeat='state in home.states | filter: home.search'>
       <a ui-sref='state({id: state.abbreviation })'>{{state.name}}</a>
     </li>
   </ul>

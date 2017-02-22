@@ -778,3 +778,67 @@ them to actual class references.  For example:
   "Rack::Cors" => Rack::Cors
 
  (called from <top (required)> at /home/will/Desktop/dev/congress_tracker/server/config/environment.rb:5)
+Started GET "/states/co" for 127.0.0.1 at 2017-02-22 13:03:23 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"co"}
+Completed 200 OK in 662ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:03:24 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 302ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:03:46 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 283ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:03:50 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 263ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:03:56 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 281ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:04:22 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 273ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/mi" for 127.0.0.1 at 2017-02-22 13:04:25 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"mi"}
+Completed 200 OK in 634ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:04:41 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 281ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/nm" for 127.0.0.1 at 2017-02-22 13:04:42 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"nm"}
+Completed 200 OK in 602ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:04:45 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 282ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ne" for 127.0.0.1 at 2017-02-22 13:04:46 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ne"}
+Completed 200 OK in 582ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 13:04:48 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 280ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+

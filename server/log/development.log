@@ -772,3 +772,9 @@ Processing by StatesController#show as HTML
 Completed 200 OK in 647ms (Views: 16.1ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/congress_tracker/server/config/environment.rb:5)

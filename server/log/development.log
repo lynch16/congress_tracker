@@ -1460,3 +1460,28 @@ Processing by StatesController#show as HTML
 Completed 200 OK in 632ms (Views: 10.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/states" for 127.0.0.1 at 2017-02-22 17:09:02 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 290ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 17:15:50 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 320ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 17:32:43 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 322ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 17:33:28 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 333ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 17:41:15 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 301ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+

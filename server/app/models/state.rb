@@ -1,22 +1,29 @@
 class State
   include HTTParty
-  attr_accessor :name, :districts
+  attr_accessor :name, :districts, :abbreviation
 
   base_uri 'openstates.org/api/v1'
 
   def self.find_districts(id)
-    districts = self.get("/districts/#{id}/")
-    new({name: id, districts: districts})
+    state = self.find_state(id)
+    state.districts = self.get("/districts/#{id}/").uniq{|d| d["name"]}
+    return state
+  end
+
+  def self.find_state(id)
+    state = self.get("/metadata/#{id}/")
+    new(state)
   end
 
   def self.find_all_state_names()
-    response = self.get('https://openstates.org/api/v1/metadata/')
+    response = self.get('/metadata/')
     response.each { |s| new(s) }
   end
 
   def initialize(json)
-    self.name = json[:name]
+    self.name = json["name"]
     self.districts = json[:districts]
+    self.abbreviation = json[:abbreviation]
   end
 
 end

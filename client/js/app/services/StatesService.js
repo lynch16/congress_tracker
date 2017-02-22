@@ -3,7 +3,7 @@ function StatesService($http){
     return $http.get('http://localhost:3000/states')
   }
 
-  this.getState = function(id){
+  this.getDistricts = function(id){
     return $http.get('http://localhost:3000/states/' + id);
   }
 }

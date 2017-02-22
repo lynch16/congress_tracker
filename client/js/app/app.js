@@ -19,7 +19,7 @@ angular
           controller: 'StateController as state',
           resolve: {
             state: function($stateParams, StatesService){
-              return StatesService.getState($stateParams.id);
+              return StatesService.getDistricts($stateParams.id);
             }
           }
         })

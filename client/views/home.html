@@ -2,7 +2,7 @@
   Home
   <ul>
     <li ng-repeat='state in home.states'>
-      {{state.name}}
+      <a ui-sref='state({id: state.abbreviation })'>{{state.name}}</a>
     </li>
   </ul>
 </div>

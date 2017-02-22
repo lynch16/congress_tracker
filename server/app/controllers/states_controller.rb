@@ -5,7 +5,7 @@ class StatesController < ApplicationController
   end
 
   def show
-    state_districts = State.find_districts(params[:id])
-    render json: state_districts, status: :ok
+    state = State.find_districts(params[:id])
+    render json: state, status: :ok
   end
 end

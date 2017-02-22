@@ -11,8 +11,8 @@
 <body>
 
 	<div class="app" ng-app="app">
-		<a ui-sref='home'>Top Stories</a>
-		<div ui-view></div>
+		<a href='' ng-click='state.getState("nc")'>NC</a>
+			 <div ui-view></div>
 
 	</div>
 
@@ -21,5 +21,7 @@
 	<script src="js/app/app.js"></script>
 	<script src="js/app/controllers/StateController.js"></script>
 	<script src="js/app/controllers/HomeController.js"></script>
+	<script src="js/app/services/StatesService.js"></script>
+
 </body>
 </html>

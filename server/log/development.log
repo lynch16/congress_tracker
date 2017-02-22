@@ -1485,3 +1485,8 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 301ms (Views: 8.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/states" for 127.0.0.1 at 2017-02-22 18:00:10 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 351ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+

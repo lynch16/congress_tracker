@@ -1,5 +1,5 @@
-function StateController(post){
-  this.data = post.data;
+function StateController(state){
+  this.data = state.data;
 }
 
 angular

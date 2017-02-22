@@ -1,4 +1,4 @@
-function SearchController($scope, NgMap) {
+function SearchController($scope, $state, NgMap) {
 
   var marker, map, lat, long;
 
@@ -9,15 +9,9 @@ function SearchController($scope, NgMap) {
       lat = marker.getPosition().lat();
       long = marker.getPosition().lng();
       console.log(lat + ', ' + long);
+      $state.go('legislators.search', {lat: lat, long: long})
     });
   }
-  //stories contains each story returned from http get within stories.data
-      // Do stuff with your $scope.
-      // Note: Some of the directives require at least something to be defined originally!
-      // e.g. $scope.markers = []
-
-      // uiGmapGoogleMapApi is a promise.
-      // The "then" callback function provides the google.maps object.
 }
 
 angular

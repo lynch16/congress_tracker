@@ -1,4 +1,10 @@
-function HomeController(states, $scope) {
+function SearchController($scope, NgMap) {
+
+  NgMap.getMap().then(function(map) {
+    console.log(map.getCenter());
+    console.log('markers', map.markers);
+    console.log('shapes', map.shapes);
+  });
   //stories contains each story returned from http get within stories.data
       // Do stuff with your $scope.
       // Note: Some of the directives require at least something to be defined originally!
@@ -6,11 +12,8 @@ function HomeController(states, $scope) {
 
       // uiGmapGoogleMapApi is a promise.
       // The "then" callback function provides the google.maps object.
-
-  var ctrl = this;
-  ctrl.states = states.data
 }
 
 angular
   .module('app')
-  .controller('HomeController', HomeController)
+  .controller('SearchController', SearchController)

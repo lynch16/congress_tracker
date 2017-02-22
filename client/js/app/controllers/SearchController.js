@@ -1,10 +1,16 @@
 function SearchController($scope, NgMap) {
 
-  NgMap.getMap().then(function(map) {
-    console.log(map.getCenter());
-    console.log('markers', map.markers);
-    console.log('shapes', map.shapes);
-  });
+  var marker, map, lat, long;
+
+  $scope.getCoords = function(){
+    NgMap.getMap().then(function(evtMap) {
+      map = evtMap;
+      marker = map.markers[0];
+      lat = marker.getPosition().lat();
+      long = marker.getPosition().lng();
+      console.log(lat + ', ' + long);
+    });
+  }
   //stories contains each story returned from http get within stories.data
       // Do stuff with your $scope.
       // Note: Some of the directives require at least something to be defined originally!

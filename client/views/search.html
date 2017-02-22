@@ -1,7 +1,11 @@
-Search by Address: <input ng-model="search.address" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 1000, 'blur': 0} }"/>
+Search by Address: <input ng-model="search.address"  ng-model-options="{ updateOn: 'default blur', debounce: {'default': 1000, 'blur': 0} }"/>
+
+<div ng-if="search.address">
+  Please click the marker to display data.
+</div>
 
 <div map-lazy-load="https://maps.google.com/maps/api/js">
   <ng-map center="41,-95" zoom="4">
-    <marker position= "{{search.address}}"></marker>
+    <marker position="{{search.address}}" on-click='getCoords()'></marker>
   </ng-map>
 </div>

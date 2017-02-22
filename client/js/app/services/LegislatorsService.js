@@ -1,5 +1,5 @@
 function LegislatorsService($http){
-  this.searchLegislators = function(lat, long){
+  this.searchByLocation = function(lat, long){
     return $http({
       url: "http://localhost:3000/legislators/",
       method: 'GET',

@@ -23,7 +23,7 @@ angular
             controller: 'LegislatorController as vm',
             resolve: {
               legislators: function($stateParams, LegislatorsService){
-                  return LegislatorsService.searchLegislators($stateParams.lat, $stateParams.long)
+                  return LegislatorsService.searchByLocation($stateParams.lat, $stateParams.long)
                 }
               }
             })

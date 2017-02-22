@@ -1294,3 +1294,37 @@ Processing by LegislatorsController#index as HTML
 Completed 200 OK in 312ms (Views: 0.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 16:45:21 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1812ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 16:45:54 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x0000000383d418>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 16:46:02 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1725ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 16:50:38 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1855ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 16:51:52 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1784ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+

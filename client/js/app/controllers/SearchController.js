@@ -8,8 +8,7 @@ function SearchController($scope, $state, NgMap) {
       marker = map.markers[0];
       lat = marker.getPosition().lat();
       long = marker.getPosition().lng();
-      console.log(lat + ', ' + long);
-      $state.go('legislators.search', {lat: lat, long: long})
+      $state.go('legislators', {lat: lat, long: long});
     });
   }
 }

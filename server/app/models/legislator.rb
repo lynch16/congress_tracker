@@ -6,9 +6,14 @@ class Legislator
 
   base_uri 'openstates.org/api/v1'
 
+  def self.search_location(lat, long)
+    response = self.get("/legislators/geo/?lat=#{lat}&long=#{long}")
+    response.collect {|l| new(l) }
+  end
+
   def initialize(json)
     self.name = json["full_name"]
-    self.state = State.find_state(json["state"])
+    # self.state = State.find_state(json["state"])
     self.chamber = json["chamber"]
   end
 end

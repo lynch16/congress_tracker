@@ -13,6 +13,20 @@ angular
               }
             }
           })
+          .state('legislators', {
+            url: '/legislators',
+            params: {
+              lat: null,
+              long: null
+            },
+            templateUrl: 'views/legislator.html',
+            controller: 'LegislatorController as vm',
+            resolve: {
+              legislators: function($stateParams, LegislatorsService){
+                  return LegislatorsService.searchLegislators($stateParams.lat, $stateParams.long)
+                }
+              }
+            })
           .state('search', {
             url: '/search',
             templateUrl: 'views/search.html',
@@ -28,37 +42,26 @@ angular
               }
             }
           })
-          .state('legislators', {
-            url: '/legislator',
-            templateUrl: 'views/legislators.html',
-            controller: 'LegislatorController as legislator',
-            resolve: {
-              legislators: function($stateParams, LegislatorsService){
-              }
-            }
-          })
-          .state('legislators.profile', {
-            url: '/legislator/:id',
-            templateUrl: 'views/legislators/profile.html',
-            controller: 'LegislatorProfileController as profile',
-            resolve: {
-              legislator: function($stateParams, LegislatorsService){
-              }
-            }
-          })
-          .state('legislators.search', {
-            params: {
-              lat: '',
-              long: ''
-            }
-            templateUrl: 'views/state.html',
-            controller: 'StateController as state',
-            resolve: {
-              legislator: function($stateParams, LegislatorsService){
-                return LegislatorsService.searchLegislators($stateParams.lat, $stateParams.long)
-              }
-            }
-          })
+          // .state('legislators.profile', {
+          //   url: '/legislator/:id',
+          //   templateUrl: 'views/legislators/profile.html',
+          //   controller: 'LegislatorProfileController as profile',
+          //   resolve: {
+          //     legislator: function($stateParams, LegislatorsService){
+          //     }
+          //   }
+          // })
+          // .state('legislators', {
+          //   url: '/legislators?lat&long',
+          //
+          //   templateUrl: 'views/legislator.html',
+          //   controller: 'LegislatorController as legislator',
+          //   resolve: {
+          //     legislator: function($stateParams, LegislatorsService){
+          //       return LegislatorsService.searchLegislators($stateParams.lat, $stateParams.long)
+          //     }
+          //   }
+          // })
 
         $urlRouterProvider.otherwise('/home')
     })

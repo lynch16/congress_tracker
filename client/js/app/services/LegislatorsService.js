@@ -1,9 +1,12 @@
 function LegislatorsService($http){
   this.searchLegislators = function(lat, long){
-    return $http.({
+    return $http({
       url: "http://localhost:3000/legislators/",
-      method: "GET",
-      params: {lat: lat, long: long}
+      method: 'GET',
+      params: {
+        lat: lat,
+        long: long
+      }
     });
   }
 }

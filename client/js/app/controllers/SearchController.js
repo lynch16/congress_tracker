@@ -26,8 +26,6 @@ function SearchController($scope, $window, $state, NgMap) {
         var long = results[0].geometry.location.lng();
         $state.go('legislators', {lat: lat, long: long});
 
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
       }
     });
   }

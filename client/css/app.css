@@ -1,38 +1,24 @@
-html, body {
-	background: #fff;
-	font-family: "Helvetica Neue", Verdana, sans-serif;
+
+/*
+ * Start Bootstrap - Full (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.header {
-	height: 47px;
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.full {
+    background: url('../images/daisy.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-.header__fixed {
-	background: #3661A2;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	position: fixed;
-	height: inherit;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-.header ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.header a {
-	display: block;
-	padding: 14px 15px;
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.5);
-	float: left;
-}
-
-.header a.active {
-	background: #2C538C;
-	font-weight: 700;
-	color: #fff;
+.body {
+  padding-top:
 }

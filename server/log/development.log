@@ -1490,3 +1490,146 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 351ms (Views: 5.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:01:05 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 3789ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:01:09 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 3470ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 18:01:50 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x00000001effb68>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:01:56 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 2207ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:02:13 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1634ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:02:58 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1660ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 18:03:10 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 820ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:03:15 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1636ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 18:04:38 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x000000032036d8>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:04:44 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1731ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 18:04:58 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x000000020d8430>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:05:02 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1608ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 18:06:12 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 390ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x000000039a58f0>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:06:18 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1608ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-22 18:06:55 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x00000003414968>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 18:27:24 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1798ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 19:02:57 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1839ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-22 19:05:07 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 4778ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 19:05:16 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 293ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ky" for 127.0.0.1 at 2017-02-22 19:05:17 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ky"}
+Completed 200 OK in 648ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 19:05:20 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 292ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+

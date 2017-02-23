@@ -1843,3 +1843,125 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 294ms (Views: 5.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:56:05 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 340ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:56:28 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 282ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:56:30 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 287ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:57:08 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 875ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:57:26 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 357ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:57:38 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 290ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:57:43 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 266ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:57:47 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 261ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:58:51 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 287ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:59:17 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 274ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:59:45 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 296ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 20:59:55 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 293ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:10 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 291ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:16 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 300ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:25 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 299ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:36 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 270ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:39 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 291ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:45 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 279ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/nd" for 127.0.0.1 at 2017-02-22 21:00:48 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"nd"}
+Completed 200 OK in 639ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:00:52 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 316ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:01:10 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 994ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:01:19 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 291ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/co" for 127.0.0.1 at 2017-02-22 21:01:23 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"co"}
+Completed 200 OK in 681ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 21:01:25 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 303ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+

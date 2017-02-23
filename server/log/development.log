@@ -1633,3 +1633,25 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 292ms (Views: 12.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/states/ca" for 127.0.0.1 at 2017-02-22 19:05:58 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ca"}
+Completed 200 OK in 655ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 19:06:00 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 300ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ma" for 127.0.0.1 at 2017-02-22 19:06:29 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ma"}
+Completed 200 OK in 661ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-22 19:06:35 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 536ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+

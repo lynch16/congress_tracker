@@ -3,16 +3,6 @@ angular
     .config(function($stateProvider, $urlRouterProvider){
 
       $stateProvider
-        .state('home', {
-          url: '/',
-          templateUrl: 'views/home.html',
-          controller: 'HomeController as home',
-          resolve: {
-            states: function(StatesService){
-              return StatesService.getAllStates();
-              }
-            }
-          })
           .state('legislators', {
             url: '/legislators',
             params: {
@@ -20,18 +10,28 @@ angular
               long: null
             },
             templateUrl: 'views/legislator.html',
-            controller: 'LegislatorController as vm',
+            controller: 'LegislatorsController',
             resolve: {
               legislators: function($stateParams, LegislatorsService){
                   return LegislatorsService.searchByLocation($stateParams.lat, $stateParams.long)
                 }
               }
-            })
-          .state('search', {
+            });
+          .state('legislators.search', {
             url: '/search',
-            templateUrl: 'views/search.html',
-            controller: 'SearchController as search',
-            })
+            templateUrl: 'views/legislators/search.html',
+            controller: 'SearchLegislatorsController as search',
+          });
+          .state('states', {
+            url: '/',
+            templateUrl: 'views/states.html',
+            controller: 'StatesController as states',
+            resolve: {
+              states: function(StatesService){
+                return StatesService.getAllStates();
+                }
+              }
+            });
           .state('state', {
             url: '/state/:id',
             templateUrl: 'views/state.html',
@@ -41,7 +41,7 @@ angular
                 return StatesService.getDistricts($stateParams.id);
               }
             }
-          })
+          });
           // .state('legislators.profile', {
           //   url: '/legislator/:id',
           //   templateUrl: 'views/legislators/profile.html',

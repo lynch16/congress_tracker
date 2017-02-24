@@ -1,7 +1,7 @@
 function StatesController(states, $scope) {
 
-  var ctrl = this;
-  ctrl.states = states.data
+  var vm = this;
+  vm.states = states.data
 }
 
 angular

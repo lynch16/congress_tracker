@@ -1965,3 +1965,67 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 303ms (Views: 6.9ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/congress_tracker/server/config/environment.rb:5)
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-23 20:56:48 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x000000045a3b20>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/states" for 127.0.0.1 at 2017-02-23 21:00:30 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 307ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-23 21:00:33 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 249ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-02-23 21:01:03 -0500
+Processing by LegislatorsController#index as HTML
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `collect' for #<HTTParty::Response:0x0000000415ed58>):
+  
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/states" for 127.0.0.1 at 2017-02-23 21:01:58 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 320ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ca" for 127.0.0.1 at 2017-02-23 21:01:59 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ca"}
+Completed 200 OK in 589ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-23 21:03:15 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1719ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-23 21:03:23 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 291ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/la" for 127.0.0.1 at 2017-02-23 21:03:36 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"la"}
+Completed 200 OK in 584ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+

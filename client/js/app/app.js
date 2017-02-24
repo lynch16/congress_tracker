@@ -3,45 +3,50 @@ angular
     .config(function($stateProvider, $urlRouterProvider){
 
       $stateProvider
-          .state('legislators', {
-            url: '/legislators',
-            params: {
-              lat: null,
-              long: null
-            },
-            templateUrl: 'views/legislator.html',
-            controller: 'LegislatorsController',
-            resolve: {
-              legislators: function($stateParams, LegislatorsService){
-                  return LegislatorsService.searchByLocation($stateParams.lat, $stateParams.long)
-                }
-              }
-            });
-          .state('legislators.search', {
-            url: '/search',
-            templateUrl: 'views/legislators/search.html',
-            controller: 'SearchLegislatorsController as search',
-          });
-          .state('states', {
+          .state('home',{
             url: '/',
+            templateUrl: 'index.html'
+          })
+          .state('states', {
+            url: '/states',
             templateUrl: 'views/states.html',
-            controller: 'StatesController as states',
+            controller: 'StatesController as vm',
             resolve: {
               states: function(StatesService){
                 return StatesService.getAllStates();
                 }
               }
-            });
+            })
           .state('state', {
-            url: '/state/:id',
-            templateUrl: 'views/state.html',
+            url: '/states/:id',
+            templateUrl: 'views/states/state.html',
             controller: 'StateController as state',
             resolve: {
               state: function($stateParams, StatesService){
                 return StatesService.getDistricts($stateParams.id);
               }
             }
-          });
+          })
+          .state('legislators', {
+            url: '/legislators',
+            params: {
+              lat: null,
+              long: null
+            },
+            templateUrl: 'views/legislators.html',
+            controller: 'LegislatorsController as ctrl',
+            resolve: {
+              legislators: function($stateParams, LegislatorsService){
+                  return LegislatorsService.searchByLocation($stateParams.lat, $stateParams.long)
+                }
+              }
+            })
+          .state('search', {
+            url: '/search',
+            templateUrl: 'views/search.html',
+            controller: 'SearchLegislatorsController as search',
+          })
+
           // .state('legislators.profile', {
           //   url: '/legislator/:id',
           //   templateUrl: 'views/legislators/profile.html',
@@ -63,5 +68,5 @@ angular
           //   }
           // })
 
-        $urlRouterProvider.otherwise('/home')
+        $urlRouterProvider.otherwise('/')
     })

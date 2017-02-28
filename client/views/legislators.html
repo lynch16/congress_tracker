@@ -4,7 +4,17 @@ Filter by Chamber:
       <option ng-repeat="option in ctrl.availableOptions" ng-value="option.value">{{option.name}}</option>
 </select>
 
-<div ng-repeat="legislator in ctrl.legislators | filter: ctrl.filter">
-  {{legislator.name}} </br>
-  {{legislator.chamber}}
-</div>
+  <table class='table table-bordered table-striped'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Chamber</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="legislator in ctrl.legislators | filter: ctrl.filter">
+        <td>{{legislator.name}} </td>
+        <td>{{legislator.chamber}}</td>
+      </tr>
+    </tbody>
+  </table>

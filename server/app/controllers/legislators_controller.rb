@@ -1,23 +1,31 @@
 class LegislatorsController < ApplicationController
+  before_action :set_legislator, only: [:show, :upvote, :downvote, :comment]
   def index
     legislators = Legislator.search_location(params[:lat], params[:long])
     render json: legislators, status: :ok
   end
 
   def show
-    legislator = Legislator.find(params[:id])
-    render json: legislator, status: :ok
+    render json: @legislator, status: :ok
   end
 
   def upvote
-    a = Legislator.find(params[:id])
-    a.upvote
-    render json: a, status: :ok
+    @legislator.upvote
+    render json: @legislator, status: :ok
   end
 
   def downvote
-    a = Legislator.find(params[:id])
-    a.downvote
-    render json: a, status: :ok
+    @legislator.downvote
+    render json: @legislator, status: :ok
+  end
+
+  def comment
+    @legislator.comment(params[:comment], params[:author])
+    render json: @legislator, status: :ok
+  end
+
+  private
+  def set_legislator
+    @legislator = Legislator.find(params[:id])
   end
 end

@@ -38,4 +38,9 @@ class Legislator < ApplicationRecord
     self.popularity -= 1
     self.save
   end
+
+  def comment(comment, author)
+    new_comment = Comment.create(author: author, comment: comment)
+    self.comments << new_comment
+  end
 end

@@ -27,7 +27,7 @@ angular
               }
             }
           })
-          .state('legislators', {
+          .state('search.legislators', {
             url: '/legislators',
             params: {
               lat: null,

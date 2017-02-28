@@ -24,7 +24,7 @@ function SearchLegislatorsController($scope, $window, $state, NgMap) {
         });
         var lat = results[0].geometry.location.lat();
         var long = results[0].geometry.location.lng();
-        $state.go('legislators', {lat: lat, long: long});
+        $state.go('search.legislators', {lat: lat, long: long});
 
       }
     });

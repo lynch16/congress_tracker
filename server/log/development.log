@@ -2029,3 +2029,43 @@ Processing by StatesController#show as HTML
 Completed 200 OK in 584ms (Views: 13.1ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2017-02-28 07:31:58 -0500
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-28 07:32:32 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 326ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 07:36:44 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1847ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 07:39:32 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1580ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 07:40:03 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1655ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 07:41:43 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 200 OK in 1767ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+

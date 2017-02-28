@@ -2998,3 +2998,242 @@ Processing by StatesController#index as HTML
 Completed 200 OK in 263ms (Views: 8.9ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "legislators" ("voteID" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "alegislators" ("voteID" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "alegislators" ("voteID","name","state","chamber","email","popularity","created_at","updated_at")
+                     SELECT "voteID","name","state","chamber","email","popularity","created_at","updated_at" FROM "legislators"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "legislators"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "legislators" ("voteID" varchar NOT NULL PRIMARY KEY, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "legislators" ("voteID","name","state","chamber","email","popularity","created_at","updated_at")
+                     SELECT "voteID","name","state","chamber","email","popularity","created_at","updated_at" FROM "alegislators"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "alegislators"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (19.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-28 14:23:49 UTC], ["updated_at", 2017-02-28 14:23:49 UTC]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='sqlite_autoindex_legislators_1' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='sqlite_autoindex_legislators_1' AND type='index'
+[0m
+Started GET "/states" for 127.0.0.1 at 2017-02-28 09:23:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatesController#index as HTML
+Completed 200 OK in 411ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:23:57 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `voteId=' for #<Legislator:0x0000000467cb28>
+Did you mean?  voteID=
+               voteID
+               voteID?):
+  
+app/models/legislator.rb:17:in `initialize'
+app/models/legislator.rb:11:in `block in search_location'
+app/models/legislator.rb:11:in `search_location'
+app/controllers/legislators_controller.rb:3:in `index'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "legislators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "voteId" varchar, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-28 14:25:01 UTC], ["updated_at", 2017-02-28 14:25:01 UTC]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:25:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `set_primary_key' for #<Class:0x000000040ca1d0>
+Did you mean?  get_primary_key
+               quoted_primary_key
+               reset_primary_key):
+  
+app/models/legislator.rb:2:in `<class:Legislator>'
+app/models/legislator.rb:1:in `<top (required)>'
+app/controllers/legislators_controller.rb:3:in `index'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "legislators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vote_id" varchar, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-28 14:25:48 UTC], ["updated_at", 2017-02-28 14:25:48 UTC]]
+  [1m[35m (20.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:25:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `set_primary_key' for #<Class:0x0000000473c6f8>
+Did you mean?  get_primary_key
+               quoted_primary_key
+               reset_primary_key):
+  
+app/models/legislator.rb:2:in `<class:Legislator>'
+app/models/legislator.rb:1:in `<top (required)>'
+app/controllers/legislators_controller.rb:3:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:26:29 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000203"], ["name", "Frank R Kotowski"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 14:26:30 UTC], ["updated_at", 2017-02-28 14:26:30 UTC]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000781"], ["name", "Thomas C. Walsh"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 14:26:30 UTC], ["updated_at", 2017-02-28 14:26:30 UTC]]
+  [1m[35m (21.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001136"], ["name", "Richard Marple"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 14:26:31 UTC], ["updated_at", 2017-02-28 14:26:31 UTC]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001407"], ["name", "John A. Leavitt"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 14:26:31 UTC], ["updated_at", 2017-02-28 14:26:31 UTC]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001338"], ["name", "Scott McGilvray"], ["state", "New Hampshire"], ["chamber", "Senate"], ["created_at", 2017-02-28 14:26:31 UTC], ["updated_at", 2017-02-28 14:26:31 UTC]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1852ms (Views: 1.6ms | ActiveRecord: 111.1ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:28:04 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1628ms (Views: 1.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-28 09:28:18 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 447ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 09:28:45 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1617ms (Views: 2.0ms | ActiveRecord: 2.1ms)
+
+

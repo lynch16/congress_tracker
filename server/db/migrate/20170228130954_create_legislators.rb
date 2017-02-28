@@ -1,7 +1,7 @@
 class CreateLegislators < ActiveRecord::Migration[5.0]
   def change
     create_table :legislators do |t|
-      t.string :voteId
+      t.string :vote_id, primary: true
       t.string :name
       t.string :state
       t.string :chamber

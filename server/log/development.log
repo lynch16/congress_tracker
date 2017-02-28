@@ -3744,3 +3744,103 @@ Processing by LegislatorsController#show as HTML
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/legislators/NHL000203/upvote" for 127.0.0.1 at 2017-02-28 11:23:19 -0500
+Processing by LegislatorsController#upvote as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Frank R Kotowski"], ["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 4], ["updated_at", 2017-02-28 16:23:19 UTC], ["vote_id", "NHL000203"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 33ms (Views: 0.6ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/legislators/NHL000203/upvote" for 127.0.0.1 at 2017-02-28 11:23:19 -0500
+Processing by LegislatorsController#upvote as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Frank R Kotowski"], ["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 5], ["updated_at", 2017-02-28 16:23:19 UTC], ["vote_id", "NHL000203"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 11:23:24 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1705ms (Views: 0.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/legislators/NHL000781" for 127.0.0.1 at 2017-02-28 11:23:26 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000781/upvote" for 127.0.0.1 at 2017-02-28 11:23:28 -0500
+Processing by LegislatorsController#upvote as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 1], ["updated_at", 2017-02-28 16:23:28 UTC], ["vote_id", "NHL000781"]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/legislators/NHL000781/upvote" for 127.0.0.1 at 2017-02-28 11:23:28 -0500
+Processing by LegislatorsController#upvote as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 2], ["updated_at", 2017-02-28 16:23:28 UTC], ["vote_id", "NHL000781"]]
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 32ms (Views: 0.9ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 11:23:32 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1675ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 11:23:34 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+

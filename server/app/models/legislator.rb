@@ -1,6 +1,6 @@
-class Legislator
+class Legislator < ApplicationRecord
+  validates :name, presence: true, uniqueness:true
   include HTTParty
-  attr_accessor :name, :state, :chamber
 
   TERM = '2013-2014'
 
@@ -8,11 +8,12 @@ class Legislator
 
   def self.search_location(lat, long)
     response = self.get("/legislators/geo/?lat=#{lat}&long=#{long}")
-    response.collect {|l| new(l) }.compact
+    response.collect {|l| Legislator.create(l) }.compact
   end
 
-  def initialize(json)
+  def initialize(json={})
     if json["active"] == true
+      super()
       self.name = json["full_name"]
       self.state = State.find_state(json["state"]).name
       if json["chamber"] == 'upper'
@@ -23,5 +24,13 @@ class Legislator
         self.chamber = 'Other'
       end
     end
+  end
+
+  def upvote
+    self.popularity ++
+  end
+
+  def downvote
+    self.popularity --
   end
 end

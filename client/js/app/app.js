@@ -46,12 +46,17 @@ angular
             templateUrl: 'views/search.html',
             controller: 'SearchLegislatorsController as search',
           })
+          .state('legislators', {
+            url: '/legislators',
+            templateUrl: 'views/legislators.html',
+          })
           .state('legislator', {
-            url: '/legislator/:id',
-            templateUrl: 'views/legislators/profile.html'
-            controller: 'LegislatorController as legislator'
+            url: '/legislators/:id',
+            templateUrl: 'views/legislators/profile.html',
+            controller: 'LegislatorController as legislator',
             resolve: {
               legislator: function($stateParams, legislatorService){
+                console.log('hi');
                 return LegislatorService.getLegislator($stateParams.id)
               }
             }

@@ -1,6 +1,7 @@
 function LegislatorController(legislator, $scope, $http){
   this.data = legislator.data;
   var legislator = this;
+  console.log(this.data);
 
   function upVote($http){
     return $http.get('http://localhost:3000/legislators/' + this.data.id + '/upvote')

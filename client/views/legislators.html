@@ -13,7 +13,7 @@ Filter by Chamber:
     </thead>
     <tbody>
       <tr ng-repeat="legislator in ctrl.legislators | filter: ctrl.filter">
-        <td>{{legislator.name}} </td>
+        <td><a ui-sref='legislator({id: legislator.voteId })'>{{legislator.name}}</a></td>
         <td>{{legislator.chamber}}</td>
       </tr>
     </tbody>

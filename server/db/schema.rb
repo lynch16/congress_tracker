@@ -13,12 +13,14 @@
 ActiveRecord::Schema.define(version: 20170228130954) do
 
   create_table "legislators", force: :cascade do |t|
+    t.string   "voteId"
     t.string   "name"
     t.string   "state"
     t.string   "chamber"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "popularity", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

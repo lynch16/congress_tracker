@@ -14,6 +14,7 @@ class Legislator < ApplicationRecord
   def initialize(json={})
     if json["active"] == true
       super()
+      self.voteId = json["id"]
       self.name = json["full_name"]
       self.state = State.find_state(json["state"]).name
       if json["chamber"] == 'upper'
@@ -27,10 +28,10 @@ class Legislator < ApplicationRecord
   end
 
   def upvote
-    self.popularity ++
+    self.popularity += 1
   end
 
   def downvote
-    self.popularity --
+    self.popularity -= 1
   end
 end

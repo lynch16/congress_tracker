@@ -1,6 +1,7 @@
 class Legislator < ApplicationRecord
   self.primary_key = 'vote_id'
   validates :name, presence: true, uniqueness:true
+  has_many :comments
   include HTTParty
 
   TERM = '2013-2014'

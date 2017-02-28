@@ -3844,3 +3844,201 @@ Processing by LegislatorsController#show as HTML
 Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/states" for 127.0.0.1 at 2017-02-28 11:24:35 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 551ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/al" for 127.0.0.1 at 2017-02-28 11:24:37 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"al"}
+Completed 200 OK in 1878ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-28 11:25:14 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 283ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/de" for 127.0.0.1 at 2017-02-28 11:25:15 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"de"}
+Completed 200 OK in 595ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 11:25:38 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1659ms (Views: 1.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/legislators/NHL000781" for 127.0.0.1 at 2017-02-28 11:25:46 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislators/NHL000781/upvote" for 127.0.0.1 at 2017-02-28 11:25:49 -0500
+Processing by LegislatorsController#upvote as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 3], ["updated_at", 2017-02-28 16:25:49 UTC], ["vote_id", "NHL000781"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/legislators/NHL000781/downvote" for 127.0.0.1 at 2017-02-28 11:25:49 -0500
+Processing by LegislatorsController#downvote as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? AND ("legislators"."vote_id" != ?) LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "legislators" SET "popularity" = ?, "updated_at" = ? WHERE "legislators"."vote_id" = ?[0m  [["popularity", 2], ["updated_at", 2017-02-28 16:25:49 UTC], ["vote_id", "NHL000781"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-28 11:25:51 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 298ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ar" for 127.0.0.1 at 2017-02-28 11:25:52 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ar"}
+Completed 200 OK in 616ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2017-02-28 11:25:53 -0500
+Processing by StatesController#index as HTML
+Completed 200 OK in 263ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/ca" for 127.0.0.1 at 2017-02-28 11:25:56 -0500
+Processing by StatesController#show as HTML
+  Parameters: {"id"=>"ca"}
+Completed 200 OK in 615ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:26:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20170228232430)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228232430"]]
+  [1m[35m (27.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:27:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1546ms (Views: 0.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:27:22 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+

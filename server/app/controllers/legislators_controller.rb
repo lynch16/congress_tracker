@@ -4,14 +4,18 @@ class LegislatorsController < ApplicationController
     render json: legislators, status: :ok
   end
 
+  def show
+    legislator = Legislator.find(params[:id])
+    render json: legislator, status: :ok
+
   def upvote
-    a = Legislator.find_by(params[:id])
+    a = Legislator.find(params[:id])
     a.upvote
     render json: a, status: :ok
   end
 
   def downvote
-    a = Legislator.find_by(params[:id])
+    a = Legislator.find(params[:id])
     a.downvote
     render json: a, status: :ok
   end

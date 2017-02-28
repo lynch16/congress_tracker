@@ -55,8 +55,7 @@ angular
             templateUrl: 'views/legislators/profile.html',
             controller: 'LegislatorController as legislator',
             resolve: {
-              legislator: function($stateParams, legislatorService){
-                console.log('hi');
+              legislator: function($stateParams, LegislatorService){
                 return LegislatorService.getLegislator($stateParams.id)
               }
             }

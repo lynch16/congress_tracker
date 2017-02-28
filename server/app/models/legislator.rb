@@ -30,9 +30,11 @@ class Legislator < ApplicationRecord
 
   def upvote
     self.popularity += 1
+    self.save
   end
 
   def downvote
     self.popularity -= 1
+    self.save
   end
 end

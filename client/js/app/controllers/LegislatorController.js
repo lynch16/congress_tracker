@@ -1,14 +1,17 @@
 function LegislatorController(legislator, $scope, $http){
   this.data = legislator.data;
-  var legislator = this;
-  console.log(this.data);
+  var statesman = this;
 
-  function upVote($http){
-    return $http.get('http://localhost:3000/legislators/' + this.data.id + '/upvote')
+  $scope.upVote = function(){
+    $http.get('http://localhost:3000/legislators/' + statesman.data.id + '/upvote').success(function(data){
+      statesman.data.popularity = data.popularity;
+    });
   }
 
-  function downvote($http){
-    return $http.get('http://localhost:3000/legislators/' + this.data.id + '/downvote')
+  $scope.downVote = function(){
+    $http.get('http://localhost:3000/legislators/' + statesman.data.id + '/downvote').success(function(data){
+      statesman.data.popularity = data.popularity;
+    });
   }
 
 

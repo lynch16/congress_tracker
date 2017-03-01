@@ -7,3 +7,18 @@ Popularity: {{legislator.data.popularity}}</br>
 
 <button ng-click="upVote()">Up Vote</button>
 <button ng-click="downVote()">Down Vote</button>
+<input type='text'
+       class='form-control'
+       placeholder="Comment"
+       aria-describedby='sizing-addon1'
+       name='comment'
+       ng-model="legislator.comment"
+       minlength='3'
+       size="200"/>
+<button ng-click="comment()">Submit Comment</button>
+
+<div class="comments">
+  <div ng-repeat='comment in legislator.data.comments'>
+    {{comment.data}}
+  </div>
+</div>

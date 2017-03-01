@@ -40,7 +40,7 @@ class Legislator < ApplicationRecord
   end
 
   def comment(comment, author)
-    new_comment = Comment.create(author: author, comment: comment)
+    new_comment = Comment.create(author: author, content: comment)
     self.comments << new_comment
   end
 end

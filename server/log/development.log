@@ -4042,3 +4042,554 @@ Processing by LegislatorsController#show as HTML
 Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:49:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:50:03 -0500
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:19 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:20 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:28 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:30 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:30 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:52:54 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1455ms (Views: 2.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:52:56 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:55:11 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 18:55:20 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+New comment
+  
+ActionDispatch::ParamsParser::ParseError (822: unexpected token at 'New comment'):
+  
+actionpack (5.0.1) lib/action_dispatch/http/parameters.rb:78:in `rescue in parse_formatted_parameters'
+actionpack (5.0.1) lib/action_dispatch/http/parameters.rb:72:in `parse_formatted_parameters'
+actionpack (5.0.1) lib/action_dispatch/http/request.rb:354:in `block in POST'
+rack (2.0.1) lib/rack/request.rb:57:in `fetch'
+rack (2.0.1) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.0.1) lib/action_dispatch/http/request.rb:353:in `POST'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:282:in `_wrapper_enabled?'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:231:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:56:33 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 18:56:38 -0500
+Processing by LegislatorsController#comment as HTML
+  Parameters: {"comment"=>"test comment", "author"=>"me", "id"=>"NHL000203", "legislator"=>{}}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9862ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'author' for Comment.):
+  
+app/models/legislator.rb:43:in `comment'
+app/controllers/legislators_controller.rb:24:in `comment'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "legislators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vote_id" varchar, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20170228232430)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228232430"]]
+  [1m[35m (25.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-28 23:57:10 UTC], ["updated_at", 2017-02-28 23:57:10 UTC]]
+  [1m[35m (19.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:57:12 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'vote_id'=NHL000203):
+  
+app/controllers/legislators_controller.rb:30:in `set_legislator'
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:57:16 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'vote_id'=NHL000203):
+  
+app/controllers/legislators_controller.rb:30:in `set_legislator'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:57:21 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000203"], ["name", "Frank R Kotowski"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 23:57:21 UTC], ["updated_at", 2017-02-28 23:57:21 UTC]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000781"], ["name", "Thomas C. Walsh"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 23:57:22 UTC], ["updated_at", 2017-02-28 23:57:22 UTC]]
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001136"], ["name", "Richard Marple"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 23:57:22 UTC], ["updated_at", 2017-02-28 23:57:22 UTC]]
+  [1m[35m (20.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001407"], ["name", "John A. Leavitt"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-02-28 23:57:22 UTC], ["updated_at", 2017-02-28 23:57:22 UTC]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001338"], ["name", "Scott McGilvray"], ["state", "New Hampshire"], ["chamber", "Senate"], ["created_at", 2017-02-28 23:57:22 UTC], ["updated_at", 2017-02-28 23:57:22 UTC]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1624ms (Views: 1.5ms | ActiveRecord: 105.8ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:57:24 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 18:57:29 -0500
+Processing by LegislatorsController#comment as HTML
+  Parameters: {"comment"=>"new comment", "author"=>"me", "id"=>"NHL000203", "legislator"=>{}}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5257ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for Comment.):
+  
+app/models/legislator.rb:43:in `comment'
+app/controllers/legislators_controller.rb:24:in `comment'
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:58:30 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/will/Desktop/dev/watchmen/server/app/models/legislator.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  
+app/models/legislator.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/legislators_controller.rb:30:in `set_legislator'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:58:35 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/will/Desktop/dev/watchmen/server/app/models/legislator.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  
+app/models/legislator.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/legislators_controller.rb:4:in `index'
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 18:59:08 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1562ms (Views: 2.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:59:11 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 18:59:16 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 18:59:20 -0500
+Processing by LegislatorsController#comment as HTML
+  Parameters: {"comment"=>"New comment", "author"=>"me", "id"=>"NHL000203", "legislator"=>{}}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 1939ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `legislator_id`):
+  
+app/models/legislator.rb:44:in `comment'
+app/controllers/legislators_controller.rb:24:in `comment'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "legislators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vote_id" varchar, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20170228232430)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "legislator_id" integer, "author" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228232430"]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-28 23:59:56 UTC], ["updated_at", 2017-02-28 23:59:56 UTC]]
+  [1m[35m (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 19:00:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000203"], ["name", "Frank R Kotowski"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:00:03 UTC], ["updated_at", 2017-03-01 00:00:03 UTC]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000781"], ["name", "Thomas C. Walsh"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:00:03 UTC], ["updated_at", 2017-03-01 00:00:03 UTC]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001136"], ["name", "Richard Marple"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:00:03 UTC], ["updated_at", 2017-03-01 00:00:03 UTC]]
+  [1m[35m (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001407"], ["name", "John A. Leavitt"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:00:03 UTC], ["updated_at", 2017-03-01 00:00:03 UTC]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001338"], ["name", "Scott McGilvray"], ["state", "New Hampshire"], ["chamber", "Senate"], ["created_at", 2017-03-01 00:00:04 UTC], ["updated_at", 2017-03-01 00:00:04 UTC]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1594ms (Views: 2.3ms | ActiveRecord: 100.9ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 19:00:04 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 19:00:08 -0500
+Processing by LegislatorsController#comment as HTML
+  Parameters: {"comment"=>"new comment", "author"=>"me", "id"=>"NHL000203", "legislator"=>{}}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2031ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 19:00:37 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 19:01:24 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 19:01:28 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 19:01:34 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 1529ms (Views: 1.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/legislators/NHL000781" for 127.0.0.1 at 2017-02-28 19:01:37 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000781"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /usr/local/bin/rake:23)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /home/will/Desktop/dev/watchmen/server/config/environment.rb:5)
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLegislators (20170228130954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "legislators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vote_id" varchar, "name" varchar, "state" varchar, "chamber" varchar, "email" varchar, "popularity" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228130954"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20170228232430)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "legislator_id" integer, "author" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170228232430"]]
+  [1m[35m (17.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-01 00:01:53 UTC], ["updated_at", 2017-03-01 00:01:53 UTC]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-02-28 19:02:00 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Frank R Kotowski"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000203"], ["name", "Frank R Kotowski"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:02:00 UTC], ["updated_at", 2017-03-01 00:02:00 UTC]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Thomas C. Walsh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL000781"], ["name", "Thomas C. Walsh"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:02:01 UTC], ["updated_at", 2017-03-01 00:02:01 UTC]]
+  [1m[35m (21.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Richard Marple"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001136"], ["name", "Richard Marple"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:02:01 UTC], ["updated_at", 2017-03-01 00:02:01 UTC]]
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "John A. Leavitt"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001407"], ["name", "John A. Leavitt"], ["state", "New Hampshire"], ["chamber", "House of Representatives"], ["created_at", 2017-03-01 00:02:01 UTC], ["updated_at", 2017-03-01 00:02:01 UTC]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLegislator Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "legislators" WHERE "legislators"."name" = ? LIMIT ?[0m  [["name", "Scott McGilvray"], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "legislators" ("vote_id", "name", "state", "chamber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vote_id", "NHL001338"], ["name", "Scott McGilvray"], ["state", "New Hampshire"], ["chamber", "Senate"], ["created_at", 2017-03-01 00:02:02 UTC], ["updated_at", 2017-03-01 00:02:02 UTC]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1704ms (Views: 1.0ms | ActiveRecord: 103.6ms)
+
+
+Started GET "/legislators/NHL000203" for 127.0.0.1 at 2017-02-28 19:02:03 -0500
+Processing by LegislatorsController#show as HTML
+  Parameters: {"id"=>"NHL000203"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/legislators/NHL000203/comment" for 127.0.0.1 at 2017-02-28 19:02:17 -0500
+Processing by LegislatorsController#comment as HTML
+  Parameters: {"comment"=>"new comment", "author"=>"me", "id"=>"NHL000203", "legislator"=>{}}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3446ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+

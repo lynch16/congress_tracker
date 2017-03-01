@@ -1,3 +1,13 @@
+<!--set up Facebook SDK-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=253548378436857";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 Profile </br>
 
 Name: {{legislator.data.name}}</br>
@@ -5,8 +15,12 @@ State: {{legislator.data.state}}</br>
 Chamber: {{legislator.data.chamber}}</br>
 Popularity: {{legislator.data.popularity}}</br>
 
+<!--FB Share button. Won't accept localhost as data-href-->
+<div class="fb-share-button" data-href="http://127.0.0.1:8000/{{legislator.data.id}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
 <button ng-click="upVote()">Up Vote</button>
 <button ng-click="downVote()">Down Vote</button>
+
 <input type='text'
        class='form-control'
        placeholder="Author"

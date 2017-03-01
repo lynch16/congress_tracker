@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :Legislator
+  belongs_to :legislator
 end

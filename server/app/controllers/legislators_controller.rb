@@ -6,7 +6,7 @@ class LegislatorsController < ApplicationController
   end
 
   def show
-    render json: @legislator, status: :ok
+    render json: @legislator.to_json(incldue: [:comments]), status: :ok
   end
 
   def upvote
@@ -21,7 +21,8 @@ class LegislatorsController < ApplicationController
 
   def comment
     @legislator.comment(params[:comment], params[:author])
-    render json: @legislator, status: :ok
+    binding.pry
+    render json: @legislator.to_json(incldue: [:comments]), status: :ok
   end
 
   private

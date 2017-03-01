@@ -12,7 +12,7 @@
            address/>
   </div>
 
-  <div ng-if='form.address.$touched && form.address.$errors' class='well well-sm'>
+  <div ng-if='form.address.$touched' class='well well-sm'>
     <div ng-messages='form.address.$error' class='error'>
       <div ng-if='form.address.$error.minlength'>Must be more than 3 characters</div>
       <div ng-if='form.address.$error.address'>Must be a valid address</div>

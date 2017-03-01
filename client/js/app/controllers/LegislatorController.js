@@ -19,7 +19,8 @@ function LegislatorController(legislator, $scope, $http){
   $scope.comment = function(){
     if(statesman.comment != ''){
       $http.post('http://localhost:3000/legislators/' + statesman.data.id + '/comment', {comment: statesman.comment, author: 'me'}).success(function(data){
-        console.log(data);
+        console.log(data.comments[data.comments.length-1]);
+        statesman.comments.push(data.comments[data.comments.length-1]);
       })
     }
   }

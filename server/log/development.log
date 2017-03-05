@@ -21277,3 +21277,135 @@ Processing by LegislatorsController#show as HTML
 Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 12:54:24 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 446ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 12:54:29 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 12:54:33 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.5ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.4ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.4ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.4ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.4ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 432ms (Views: 1.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 12:54:42 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 12:54:44 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 12:54:52 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 431ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 12:55:36 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:14:40 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 13:15:01 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.7ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.7ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.7ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.7ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.1ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 872ms (Views: 1.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:16:23 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-05 13:16:35 -0500
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 13:17:53 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.6ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.5ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.3ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 479ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:18:02 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 13:18:05 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.6ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.5ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.7ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.5ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 498ms (Views: 1.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:18:32 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:18:54 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislators/?lat=43.0276219&long=-71.43800320000003" for 127.0.0.1 at 2017-03-05 13:19:00 -0500
+Processing by LegislatorsController#index as HTML
+  Parameters: {"lat"=>"43.0276219", "long"=>"-71.43800320000003"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000203"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL000781"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001136"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001407"], ["LIMIT", 1]]
+  [1m[36mLegislator Load (0.2ms)[0m  [1m[34mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."vote_id" = ? ORDER BY "legislators"."vote_id" ASC LIMIT ?[0m  [["vote_id", "NHL001338"], ["LIMIT", 1]]
+Completed 200 OK in 502ms (Views: 2.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/legislators/" for 127.0.0.1 at 2017-03-05 13:19:03 -0500
+Processing by LegislatorsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+

@@ -24,6 +24,9 @@ angular
             resolve: {
               state: function($stateParams, StatesService){
                 return StatesService.getDistricts($stateParams.id);
+              },
+              legislators: function($stateParams, LegislatorsService){
+                return LegislatorsService.searchByState($stateParams.id);
               }
             }
           })

@@ -15,6 +15,8 @@ class Legislator < ApplicationRecord
 
   def self.search_by_state(state)
     response = self.get("/legislators/?state=#{state}")
+    all = Legislator.all
+    response.collect {|l| !all.include?(l) ? Legislator.create(l) : Legislator.find_by(id: l["id"]) }.compact
   end
 
   def initialize(json={})
@@ -23,6 +25,7 @@ class Legislator < ApplicationRecord
       self.vote_id = json["id"]
       self.name = json["full_name"]
       self.state = State.find_state(json["state"]).name
+      self.district = json["district"]
       if json["chamber"] == 'upper'
         self.chamber = 'Senate'
       elsif json["chamber"] == 'lower'

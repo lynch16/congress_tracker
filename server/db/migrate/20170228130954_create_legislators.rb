@@ -4,6 +4,7 @@ class CreateLegislators < ActiveRecord::Migration[5.0]
       t.string :vote_id, primary: true
       t.string :name
       t.string :state
+      t.string :district
       t.string :chamber
       t.string :email
       t.integer :popularity, default: 0

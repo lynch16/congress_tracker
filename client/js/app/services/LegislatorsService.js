@@ -9,6 +9,16 @@ function LegislatorsService($http){
       }
     });
   }
+
+  this.searchByState = function(state){
+    return $http({
+      url: "http://localhost:3000/legislators/",
+      method: 'GET',
+      params: {
+        state: state
+      }
+    });
+  }
 }
 
 angular

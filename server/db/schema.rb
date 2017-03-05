@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170228232430) do
     t.string   "vote_id"
     t.string   "name"
     t.string   "state"
+    t.string   "district"
     t.string   "chamber"
     t.string   "email"
     t.integer  "popularity", default: 0

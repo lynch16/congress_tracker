@@ -1,7 +1,11 @@
 class LegislatorsController < ApplicationController
   before_action :set_legislator, only: [:show, :upvote, :downvote, :comment]
   def index
-    legislators = Legislator.search_location(params[:lat], params[:long])
+    if (!!params[:lat] && !!params[:long])
+      legislators = Legislator.search_location(params[:lat], params[:long])
+    elsif (!!params[:state])
+      legislators = Legislator.search_by_state(params[:state])
+    end
     render json: legislators, status: :ok
   end
 

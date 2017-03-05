@@ -13,6 +13,10 @@ class Legislator < ApplicationRecord
     response.collect {|l| Legislator.create(l) }.compact
   end
 
+  def self.search_by_state(state)
+    response = self.get("/legislators/?state=#{state}")
+  end
+
   def initialize(json={})
     if json["active"] == true
       super()

@@ -2,7 +2,6 @@ function StateController(state, legislators){
   this.data = state.data;
   var thisState = this;
   thisState.legislators = legislators.data
-  // console.log(thisState.legislators);
   thisState.districts = state.data.districts.sort(function(a,b){
     return a.name - b.name;
   });

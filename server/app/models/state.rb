@@ -23,7 +23,7 @@ class State
   def initialize(json)
     self.name = json["name"]
     self.districts = json[:districts]
-    self.abbreviation = json[:abbreviation]
+    self.abbreviation = json["abbreviation"]
   end
 
 end

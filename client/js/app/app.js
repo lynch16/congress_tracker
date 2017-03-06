@@ -24,7 +24,14 @@ angular
             resolve: {
               state: function($stateParams, StatesService){
                 return StatesService.getDistricts($stateParams.id);
-              },
+              }
+            }
+          })
+          .state('state.legislators', {
+            url: '/legislators',
+            templateUrl: 'views/states/legislators.html',
+            controller: 'LegislatorsController as vm',
+            resolve: {
               legislators: function($stateParams, LegislatorsService){
                 return LegislatorsService.searchByState($stateParams.id);
               }

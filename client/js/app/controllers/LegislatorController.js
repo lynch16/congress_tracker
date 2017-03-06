@@ -1,6 +1,7 @@
 function LegislatorController(legislator, $scope, $http){
   this.data = legislator.data;
   var statesman = this;
+  statesman.data.state = statesman.data.state.toUpperCase()
   statesman.comment = {content: '', author: ''};
   statesman.comments = legislator.data.comments || [];
 

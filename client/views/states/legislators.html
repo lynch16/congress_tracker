@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <td align='center'>Districts</td>
+    <td align='center'>Senate</td>
+    <td align='center'>House</td>
+  </tr>
+  <tr ng-repeat='district in vm.legislators.districts'>
+    <td>{{district.name}}</td>
+    <td><a ui-sref='legislator({id: district.senate.vote_id })'>{{district.senate.name}}</a></td>
+    <td><a ui-sref='legislator({id: district.house.vote_id })'>{{district.house.name}}</a></td>
+  </tr>
+</table>

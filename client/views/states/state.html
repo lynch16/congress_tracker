@@ -1,13 +1,5 @@
 State: {{state.data.name}}
-<table>
-  <tr>
-    <td align='center'>Districts</td>
-    <td align='center'>Senate</td>
-    <td align='center'>House</td>
-  </tr>
-  <tr ng-repeat='district in state.districts'>
-    <td>{{district.name}}</td>
-    <td><a ui-sref='legislator({id: district.legislators.senate.vote_id })'>{{district.legislators.senate.name}}</a></td>
-    <td><a ui-sref='legislator({id: district.legislators.house.vote_id })'>{{district.legislators.house.name}}</a></td>
-  </tr>
-</table>
+
+<a ui-sref='state.legislators({id: state.data.abbreviation })'>Show Legislators</a>
+
+<div ui-view></div>

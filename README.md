@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a two part application.  The server is a Ruby on Rails API that combines the OpenStates.org API with local database in order to provide up to date information on state legislation and save comments.
 
-Things you may want to cover:
+The client is built on Angular JS.
 
-* Ruby version
+# INSTALLATION
+Server setup:
+  Dependencies:
+    Ruby 2.3.x
+    Bundler 1.13.6
 
-* System dependencies
+  $ bundle install #install and load all required libraries
+  $ rail s #start RoR server on port 3000
 
-* Configuration
+Client setup:
+  $ python -m SimpleHTTPServer #start python server on port 8000
 
-* Database creation
+Website now available @ localhost:8000 w/ api requests to localhost:3000
 
-* Database initialization
+# CONTRIBUTIONS
 
-* How to run the test suite
+Bug reports and pull requests are welcome on GitHub at https://github.com/lynch16/legislation_tracker.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* Services (job queues, cache servers, search engines, etc.)
+#LICENSE
 
-* Deployment instructions
-
-* ...
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

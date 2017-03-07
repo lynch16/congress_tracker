@@ -1,5 +1,7 @@
-State: {{state.data.name}}
-
-<a ui-sref='state.legislators({id: state.data.abbreviation })'>Show Legislators</a>
-
+<h3>{{state.data.name}}<h3>
+<img src="/images/state_flags/{{state.data.abbreviation}}.png" alt='{{state.data.name}} flag' class='flag'> </br>
+</br>
+<button><a ui-sref='state.legislators({id: state.data.abbreviation })'>Show Legislators</a></button>
+</br>
+</br>
 <div ui-view></div>

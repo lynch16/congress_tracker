@@ -4,7 +4,7 @@
     <td align='center'>Senate</td>
     <td align='center'>House</td>
   </tr>
-  <tr ng-repeat='district in vm.legislators.districts'>
+  <tr ng-repeat="district in vm.legislators.districts | orderBy: 'name'">
     <td>{{district.name}}</td>
     <td><a ui-sref='legislator({id: district.senate.vote_id })'>{{district.senate.name}}</a></td>
     <td><a ui-sref='legislator({id: district.house.vote_id })'>{{district.house.name}}</a></td>
